@@ -1,0 +1,6 @@
+{
+  "Name": "HW1",
+  "ProjectType": "Process",
+  "Description": "Rock-Paper-Scissors",
+  "MainFile": "Main.xaml"
+}
