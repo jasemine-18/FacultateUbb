@@ -1,0 +1,633 @@
+ExeStack:
+(bool a; (int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+bool a
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+int v
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = false
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+IF(a) THEN(v = 2) ELSE(v = 3)
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+v = 3
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+print(v)
+SymTable:
+a -> false
+v -> 3
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> false
+v -> 3
+Out:
+3
+FileTable:
+
+ExeStack:
+(bool a; (int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+bool a
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+int v
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = false
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+IF(a) THEN(v = 2) ELSE(v = 3)
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+v = 3
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+print(v)
+SymTable:
+a -> false
+v -> 3
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> false
+v -> 3
+Out:
+3
+FileTable:
+
+ExeStack:
+(bool a; (int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+bool a
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+int v
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = false
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+IF(a) THEN(v = 2) ELSE(v = 3)
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+v = 3
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+print(v)
+SymTable:
+a -> false
+v -> 3
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> false
+v -> 3
+Out:
+3
+FileTable:
+
+ExeStack:
+SymTable:
+a -> false
+v -> 3
+Out:
+3
+FileTable:
+
+ExeStack:
+(bool a; (int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+bool a
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+int v
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = false
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+IF(a) THEN(v = 2) ELSE(v = 3)
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+v = 3
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+print(v)
+SymTable:
+a -> false
+v -> 3
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> false
+v -> 3
+Out:
+3
+FileTable:
+
+ExeStack:
+SymTable:
+a -> false
+v -> 3
+Out:
+3
+FileTable:
+
+ExeStack:
+(bool a; (int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+bool a
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+int v
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = false
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+IF(a) THEN(v = 2) ELSE(v = 3)
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+v = 3
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+print(v)
+SymTable:
+a -> false
+v -> 3
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> false
+v -> 3
+Out:
+3
+FileTable:
+
+ExeStack:
+(bool a; (int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+bool a
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+int v
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = false
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+IF(a) THEN(v = 2) ELSE(v = 3)
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+v = 3
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+print(v)
+SymTable:
+a -> false
+v -> 3
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> false
+v -> 3
+Out:
+3
+FileTable:
+
+ExeStack:
+(bool a; (int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+bool a
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(int v; (a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v))))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+int v
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+Out:
+FileTable:
+
+ExeStack:
+(a = false; (IF(a) THEN(v = 2) ELSE(v = 3); print(v)))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = false
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+(IF(a) THEN(v = 2) ELSE(v = 3); print(v))
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+IF(a) THEN(v = 2) ELSE(v = 3)
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+v = 3
+print(v)
+SymTable:
+a -> false
+v -> 0
+Out:
+FileTable:
+
+ExeStack:
+print(v)
+SymTable:
+a -> false
+v -> 3
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> false
+v -> 3
+Out:
+3
+FileTable:
+
+ExeStack:
+SymTable:
+a -> false
+v -> 3
+Out:
+3
+FileTable:
+
