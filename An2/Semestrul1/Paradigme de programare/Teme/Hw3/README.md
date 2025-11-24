@@ -1,52 +1,31 @@
-1. Introduction
+ 🧠 Toy Language Interpreter — Assignments A2 & A3
+Paradigms of Programming — UBB Informatics
 
-This project implements an interpreter for a simplified toy programming language, developed as part of Assignments A2 and A3 within the “Paradigms of Programming” course. The interpreter adheres to the Model–View–Controller (MVC) architectural paradigm and is structured around modular components designed for extensibility and clarity.
+This project implements an interpreter for a simplified Toy Language, following the Model–View–Controller (MVC) architecture.
+It fulfills all requirements for Assignments A2 and A3, including ADTs, expressions, statements, file operations, execution logging, and an interactive text-based menu.
 
-The language supports variable declarations, arithmetic and logical expressions, control flow statements, relational expressions, and basic file-handling operations. All runtime data structures (execution stack, symbol table, output, file table) are implemented using custom Abstract Data Types (ADTs).
-2. Architectural Overview (MVC)
-2.1 Model
+🏛️ Architecture Overview (MVC)
+📌 Model
 
-The Model encapsulates:
+Defines all language elements and runtime structures.
 
-Program State (PrgState)
+✔ Types
 
-Statements (IStmt hierarchy)
-
-Expressions (Exp hierarchy)
-
-Types and Values
-
-Three generic ADTs:
-
-MyIStack<T> / MyStack<T>
-
-MyIDictionary<K,V> / MyDictionary<K,V>
-
-MyIList<T> / MyList<T>
-
-These abstractions ensure a clear, object-oriented representation of the interpreted language.
-
-2.1.1 Types
-
-Implemented types:
+Supported types:
 
 IntType
 
 BoolType
 
-StringType (introduced in A3)
+StringType (A3)
 
-Each type implements:
+public interface Type {
+    Value defaultValue();
+}
 
-equals
+✔ Values
 
-toString
-
-defaultValue() for variable initialization
-
-2.1.2 Values
-
-Implemented values:
+Runtime representations:
 
 IntValue
 
@@ -54,31 +33,34 @@ BoolValue
 
 StringValue
 
-Each value:
+public interface Value {
+    Type getType();
+    boolean equals(Object other);
+}
 
-stores the associated data
+✔ Expressions
 
-implements getType() and equals().
+Expressions compute values using the symbol table.
 
-2.1.3 Expressions
-
-Expression classes evaluate to Value objects using the symbolic environment (SymTable):
+Included:
 
 ValueExp
 
 VarExp
 
-ArithExp (addition, subtraction, multiplication, division)
+ArithExp
 
-LogicExp (logical conjunction/disjunction)
+LogicExp
 
-RelationalExp (A3: <, <=, ==, !=, >, >=)
+RelationalExp (A3)
 
-Each expression is defined by:
-Value eval(MyIDictionary<String, Value> symTable) throws MyException
-2.1.4 Statements
+Value eval(MyIDictionary<String, Value> tbl) throws MyException;
 
-Statements define how the program evolves. Implemented statements include:
+✔ Statements
+
+Statements modify the program state.
+
+Implemented:
 
 VarDeclStmt
 
@@ -86,9 +68,9 @@ AssignStmt
 
 PrintStmt
 
-CompStmt (composition)
-
 IfStmt
+
+CompStmt
 
 NopStmt
 
@@ -100,37 +82,41 @@ ReadFileStmt
 
 CloseRFileStmt
 
-2.1.5 Program State
+PrgState execute(PrgState state) throws MyException;
 
-PrgState stores the dynamic components of an executing program:
+✔ Abstract Data Types (ADTs)
 
-Execution Stack (ExeStack)
+Custom implementations used to model runtime structures.
 
-Symbol Table (SymTable)
+MyStack<T>
 
-Output List (Out)
+MyDictionary<K,V>
 
-File Table (FileTable)
+MyList<T>
 
-Original Program (deep copy)
+public interface MyIStack<T> {
+    void push(T value);
+    T pop() throws MyException;
+}
 
-2.2 Repository
+✔ Program State (PrgState)
 
-The Repository is responsible for:
+Stores the current execution environment.
 
-storing one or more program states
+class PrgState {
+    MyIStack<IStmt> exeStack;
+    MyIDictionary<String,Value> symTable;
+    MyIList<Value> out;
+    MyIDictionary<StringValue, BufferedReader> fileTable;
+}
 
-maintaining execution logs
+📦 Repository
 
-The logging mechanism (logPrgStateExec) outputs the complete internal state after each execution step to files such as:
+Manages program states and logs execution.
 
-log1.txt
-log2.txt
-log3.txt
-log4.txt
+✔ Execution Logging
 
-
-Each log includes:
+After each step, the repository outputs:
 
 Execution Stack
 
@@ -140,40 +126,29 @@ Output List
 
 File Table
 
-2.3 Controller
+void logPrgStateExec() throws MyException;
 
-The Controller manages the execution of programs through two fundamental methods:
+🎮 Controller
 
-2.3.1 oneStep(PrgState state)
+Executes program instructions.
 
-Executes a single instruction from the execution stack.
+✔ One-step execution
+PrgState oneStep(PrgState state);
 
-2.3.2 allStep()
+✔ Full program execution
+void allStep();
 
-Executes the entire program until the execution stack becomes empty, invoking logging after each step.
+✔ Display Flag
 
-2.3.3 Display Flag
+Controls console verbosity.
 
-A configurable flag controlling runtime visualization:
+boolean displayFlag; // ON or OFF
 
-ON → displays step-by-step execution in the console
+🖥️ View — Text Menu Interface
 
-OFF → displays only the final program state
+Interactive console menu using the Command design pattern.
 
-This significantly improves user experience during testing and debugging.
-
-2.4 View (Text-Based Interface)
-TextMenu
-
-The textual interface allows the user to:
-
-select a predefined example program
-
-toggle the display mode
-
-execute programs to completion
-
-The menu includes:
+Menu options:
 
 0) Exit
 1) Example 1
@@ -183,43 +158,69 @@ The menu includes:
 5) Relational Example
 6) Toggle display flag (ON/OFF)
 
+abstract class Command {
+    String key;
+    String description;
+    abstract void execute();
+}
 
-The interface is implemented using a set of command classes (Command, RunExampleCommand, ExitCommand, ToggleDisplayCommand).
+📚 Example Programs
 
-3. Example Programs
-
-The project includes several predefined toy-language programs illustrating:
+Examples demonstrate:
 
 variable declarations
 
-complex arithmetic expressions
+arithmetic evaluation
 
-conditional execution
+conditional branching
 
-relational expressions
+relational operations
 
-file reading + buffered file operations
+file reading (A3)
 
-These serve both as demonstrations and as automated tests for interpreter functionality.
+IStmt example = new CompStmt(
+    new VarDeclStmt("v", new IntType()),
+    new CompStmt(
+        new AssignStmt("v", new ValueExp(new IntValue(2))),
+        new PrintStmt(new VarExp("v"))
+    )
+);
 
-4. Technologies Used
+⚙️ Technologies
 
 Java 21
 
-Gradle Build System
+Gradle
 
 IntelliJ IDEA
 
-OOP / MVC Architecture
+MVC Architecture
 
-Custom Generic Data Structures
+Custom Generic ADTs
 
-5. Status
+✔️ Assignment Completion
+A2
 
-This repository contains a complete and fully functional implementation for Assignments:
+ADTs
 
-A2 — Interpreter Core + ADTs
+Expressions
 
-A3 — File Handling, Logging, Relational Expressions, Display Flag
+Statements
 
-All functionalities were implemented according to the official laboratory specification.
+Program State
+
+Interpreter Core
+
+A3
+
+File Operations
+
+Execution Logging
+
+Relational Expressions
+
+Display Flag
+
+Extended Examples
+
+All requirements from the laboratory specification are fully implemented.
