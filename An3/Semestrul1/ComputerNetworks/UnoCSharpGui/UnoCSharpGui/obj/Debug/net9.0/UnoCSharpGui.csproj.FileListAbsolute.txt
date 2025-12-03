@@ -1,0 +1,14 @@
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\bin\Debug\net9.0\UnoCSharpGui.exe
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\bin\Debug\net9.0\UnoCSharpGui.deps.json
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\bin\Debug\net9.0\UnoCSharpGui.runtimeconfig.json
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\bin\Debug\net9.0\UnoCSharpGui.dll
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\bin\Debug\net9.0\UnoCSharpGui.pdb
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\obj\Debug\net9.0\UnoCSharpGui.GeneratedMSBuildEditorConfig.editorconfig
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\obj\Debug\net9.0\UnoCSharpGui.AssemblyInfoInputs.cache
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\obj\Debug\net9.0\UnoCSharpGui.AssemblyInfo.cs
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\obj\Debug\net9.0\UnoCSharpGui.csproj.CoreCompileInputs.cache
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\obj\Debug\net9.0\UnoCSharpGui.dll
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\obj\Debug\net9.0\refint\UnoCSharpGui.dll
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\obj\Debug\net9.0\UnoCSharpGui.pdb
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\obj\Debug\net9.0\UnoCSharpGui.genruntimeconfig.cache
+C:\FACULTATE\YEAR 3\COMPUTER NETWORKS\UnoCSharpGui\UnoCSharpGui\obj\Debug\net9.0\ref\UnoCSharpGui.dll
