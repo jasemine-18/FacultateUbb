@@ -1,0 +1,23 @@
+package ro.jas.toy.model.exp;
+
+import ro.jas.toy.exceptions.MyException;
+import ro.jas.toy.model.adt.MyIDictionary;
+import ro.jas.toy.model.adt.MyIHeap;
+import ro.jas.toy.model.value.Value;
+
+/** ValueExp: intoarce valoarea data (ex: 2, true). */
+public class ValueExp implements Exp {
+    private final Value e;
+
+    //constructor
+    public ValueExp(Value e) {
+        this.e = e;
+    }
+    @Override public Value eval(MyIDictionary<String, Value> tbl,
+                                MyIHeap<Value> heap) throws MyException {
+        return e;
+    }
+    @Override public String toString() {
+        return e.toString();
+    }
+}
