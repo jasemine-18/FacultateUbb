@@ -87,12 +87,18 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetUserInput" sap:VirtualizedContainerService.HintSize="557,1334" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetUserInput" sap:VirtualizedContainerService.HintSize="566,1510" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="userInput" />
-      <Variable x:TypeArguments="x:Int32" Name="nParsed" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -104,7 +110,7 @@
         <OutArgument x:TypeArguments="x:String">[userInput]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <If Condition="[String.IsNullOrWhiteSpace(userInput)]" sap:VirtualizedContainerService.HintSize="488,1034" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[String.IsNullOrWhiteSpace(userInput)]" sap:VirtualizedContainerService.HintSize="488,1043" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,235" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -117,7 +123,7 @@
               <OutArgument x:TypeArguments="x:Int32">[out_N]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:Int32">[10]</InArgument>
+              <InArgument x:TypeArguments="x:Int32">10</InArgument>
             </Assign.Value>
           </Assign>
         </Sequence>
@@ -129,7 +135,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[Integer.TryParse(userInput, nParsed)]" sap:VirtualizedContainerService.HintSize="452,604.5" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[IsNumeric(userInput)]" sap:VirtualizedContainerService.HintSize="452,604.5" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
               <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,235" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
@@ -142,7 +148,7 @@
                     <OutArgument x:TypeArguments="x:Int32">[out_N]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:Int32">[nParsed]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32">[CInt(userInput)]</InArgument>
                   </Assign.Value>
                 </Assign>
               </Sequence>
@@ -159,7 +165,7 @@
                     <OutArgument x:TypeArguments="x:Int32">[out_N]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:Int32">[10]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32">10</InArgument>
                   </Assign.Value>
                 </Assign>
               </Sequence>
@@ -168,5 +174,6 @@
         </Sequence>
       </If.Else>
     </If>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,167" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Numarul xxxxxxxxxxx  in usserinput  este: &quot; + out_N.ToString]" />
   </Sequence>
 </Activity>

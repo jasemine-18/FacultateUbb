@@ -103,17 +103,13 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="572,421.65666666666664" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="566,554" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="fileName">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Rezultate_Filme.txt</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Rezultate_Filme.txt" Name="fileName" />
       <Variable x:TypeArguments="sd:DataTable" Name="out_Table" />
       <Variable x:TypeArguments="x:String" Name="out_CsvPath" />
       <Variable x:TypeArguments="x:String" Name="out_Title" />
-      <Variable x:TypeArguments="x:Int32" Name="in_N" />
+      <Variable x:TypeArguments="x:Int32" Name="limitMovies" />
       <Variable x:TypeArguments="x:String" Default="https://www.imdb.com/chart/top/" Name="in_Url" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -123,15 +119,16 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetUserInput - Invoke Workflow File (Workflows\GetUserInput.xaml)" sap:VirtualizedContainerService.HintSize="450,182" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\GetUserInput.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:Int32" x:Key="out_N">[in_N]</OutArgument>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="out_N">[limitMovies]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Numarul ajuns in Main este: &quot; + limitMovies.ToString]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="FilterAndScrape - Invoke Workflow File (Workflows\FilterAndScrape.xaml)" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\FilterAndScrape.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_FileName">[fileName]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="out_Title">[out_Title]</InArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="out_Table">[out_Table]</InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="in_N">[in_N]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_N">[limitMovies]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Url">[in_Url]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>

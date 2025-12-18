@@ -124,7 +124,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="OpenImdbTop250" sap:VirtualizedContainerService.HintSize="566,4210" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="OpenImdbTop250" sap:VirtualizedContainerService.HintSize="566,4398" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="filePath" />
       <Variable x:TypeArguments="x:String" Name="txtResult" />
@@ -136,13 +136,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome IMDb Top 250 movies" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,4187" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d55a17a4-7168-4f8a-8347-5fae92007507" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome IMDb Top 250 movies" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,4375" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d55a17a4-7168-4f8a-8347-5fae92007507" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,3992.5" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,4180.5" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -208,7 +208,7 @@
                 <uix:TargetAnchorable BrowserURL="imdb.com/chart/top" ContentHash="oI4cLV5j9k2Vm5C26mYqIA" DesignTimeRectangle="789, 515, 1328, 1046" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='4' tag='DIV' /&gt;" Guid="d4f52501-68b6-46e1-82cf-1f4d7f9e2d16" InformativeScreenshot="65c16f2662b6016faac4ec9d70a1b156.png" Reference="gLQ8BQgTTESrr2IMSaAHeg/IQTh9WXfekiZndNg3ya15Q" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <uix:NCheckState DisplayName="Check App State 'UL'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1088.5" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d55a17a4-7168-4f8a-8347-5fae92007507" Version="V5">
+            <uix:NCheckState DisplayName="Check App State 'UL'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1096.5" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d55a17a4-7168-4f8a-8347-5fae92007507" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,562" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -226,13 +226,13 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,231" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,235" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Filtered movie list didn't load&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Filtered movie list didn't load&quot;]" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -257,6 +257,7 @@
                 <InArgument x:TypeArguments="sd:DataTable">[dtMovies]</InArgument>
               </Assign.Value>
             </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,180" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;Valoare N trimisa: &quot; + in_N.ToString()]" />
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,180" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Randuri extrase: &quot; + out_Table.Rows.Count.ToString]" />
             <ui:CreateDirectory Output="{x:Null}" ContinueOnError="True" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="452,127.5" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" />
             <Assign sap:VirtualizedContainerService.HintSize="452,180" sap2010:WorkflowViewState.IdRef="Assign_3">
