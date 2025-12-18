@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="7aqxWLEHekC4IIv3UTrQ6Q" Reference="gLQ8BQgTTESrr2IMSaAHeg/HOjYvh5QB0eDfAT5tuGfeA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="imdb.com/chart/top" CVScreenId="df0db9c7-8619-491a-9438-c1d60731cc0e" CvElementArea="881, 638, 220, 68" CvTextArea="909, 657, 164, 34" CvTextArgument="Drama (189)" CvType="Button" DesignTimeRectangle="885, 643, 213, 60" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='ipc-chip ipc-chip--on-baseAlt' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Drama (189)' check:innerText='Drama (189)' /&gt;" Guid="4f618593-3914-45c4-a6aa-ae7f5b025bf5" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="df0db9c7-8619-491a-9438-c1d60731cc0e" CvTextArea="881, 581, 116, 24" CvTextArgument="GENRES" CvType="Text" DesignTimeRectangle="885, 579, 1106, 32" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='genres' tag='DIV' type='' class='sc-a3556045-0 eWgbat' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='GENRES' /&gt;" Guid="8c064326-8ce9-4ed1-93b2-df909c737da9" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="33e4ab9dd0a5868bd5a6f4bcd8952201.png" xmlns="">0c-oseJIrCUWkzJBDAnpnMQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

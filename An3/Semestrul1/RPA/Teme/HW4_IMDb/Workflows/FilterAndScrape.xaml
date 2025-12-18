@@ -1,0 +1,317 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="OpenImdbTop250" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd3="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable2" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_FileName" Type="InArgument(x:String)" />
+    <x:Property Name="out_Title" Type="InArgument(x:String)" />
+    <x:Property Name="out_Table" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_N" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_Url" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>OpenImdbTop250_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="OpenImdbTop250" sap:VirtualizedContainerService.HintSize="566,4210" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="filePath" />
+      <Variable x:TypeArguments="x:String" Name="txtResult" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtMovies" />
+      <Variable x:TypeArguments="x:String" Name="scrapedTitle" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome IMDb Top 250 movies" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,4187" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d55a17a4-7168-4f8a-8347-5fae92007507" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,3992.5" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'All'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198.5" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d55a17a4-7168-4f8a-8347-5fae92007507" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/top" CVScreenId="cd015657-aa44-4b54-9572-2aac2585e35d" ContentHash="h1uhV_u-1Eix4QUho5eHAA" CvElementArea="200, 1075, 118, 70" CvType="Button" DesignTimeRectangle="206, 1081, 108, 60" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-label='Open filter prompt' tag='BUTTON' /&gt;" Guid="f3f0a83f-b72b-4ddb-b396-1c048653c636" InformativeScreenshot="d3b5e9ee6c070b9a387032419cf00d1f.png" Reference="gLQ8BQgTTESrr2IMSaAHeg/-soO8Lzy806NNv5DYfJM_A" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'genresDrama (189)Advent…'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1237.5" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="d55a17a4-7168-4f8a-8347-5fae92007507" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,703" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Drama (189)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198.5" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d55a17a4-7168-4f8a-8347-5fae92007507" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="imdb.com/chart/top" CVScreenId="df0db9c7-8619-491a-9438-c1d60731cc0e" ContentHash="7aqxWLEHekC4IIv3UTrQ6Q" CvElementArea="881, 638, 220, 68" CvTextArea="909, 657, 164, 34" CvTextArgument="Drama (189)" CvType="Button" DesignTimeRectangle="885, 643, 213, 60" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='ipc-chip ipc-chip--on-baseAlt' matching:class='fuzzy' fuzzylevel:class='0.0' aaname='Drama (189)' check:innerText='Drama (189)' /&gt;" Guid="4f618593-3914-45c4-a6aa-ae7f5b025bf5" InformativeScreenshot="33e4ab9dd0a5868bd5a6f4bcd8952201.png" Reference="gLQ8BQgTTESrr2IMSaAHeg/HOjYvh5QB0eDfAT5tuGfeA" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="None">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="df0db9c7-8619-491a-9438-c1d60731cc0e" CvTextArea="881, 581, 116, 24" CvTextArgument="GENRES" CvType="Text" DesignTimeRectangle="885, 579, 1106, 32" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='genres' tag='DIV' type='' class='sc-a3556045-0 eWgbat' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='GENRES' /&gt;" Guid="8c064326-8ce9-4ed1-93b2-df909c737da9" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="[UiPath.UIAutomationNext.Enums.NClickMode.None]" ClipboardMode="Never" DisplayName="Type Into 'release year'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,251" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="d55a17a4-7168-4f8a-8347-5fae92007507" Text="2000" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="imdb.com/chart/top" CVScreenId="9421f97a-51b5-4716-b925-9012e19c5fc1" ContentHash="dHgSDZM3UEyIbMAzggG4Dg" CvElementArea="881, 1067, 512, 105" CvType="InputBox" DesignTimeRectangle="887, 1072, 503, 96" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='text-input__0' tag='INPUT' type='number' class='ipc-textfield__input' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="8bbde931-624f-4113-8ad1-3f23048dd834" InformativeScreenshot="bf6a666e6ea4562c9290b3f8bc60019a.png" Reference="gLQ8BQgTTESrr2IMSaAHeg/pbBrqOGyVESgxB1hZ3FnmA" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="9421f97a-51b5-4716-b925-9012e19c5fc1" CvTextArea="883, 1017, 212, 24" CvTextArgument="RELEASE YEAR" CvType="Text" DesignTimeRectangle="885, 1014, 1106, 32" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='release year' tag='DIV' type='' class='sc-a3556045-0 eWgbat' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='RELEASE YEAR' /&gt;" Guid="f1bb4c68-5ddd-4c3f-a057-b5d7090023ef" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ActivateBefore="True" ClickType="[UiPath.UIAutomationNext.Enums.NClickType.Double]" DisplayName="Click 'genresDrama (189)Advent…(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189.5" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d55a17a4-7168-4f8a-8347-5fae92007507" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="imdb.com/chart/top" CVScreenId="e98b84dd-420a-4b4e-8386-56a22ecc37e8" ContentHash="E91gzXxhIEqTsvFT_86KSA" CvElementArea="2045, 446, 45, 42" CvType="CloseButton" DesignTimeRectangle="2056, 454, 26, 26" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;path' idx='2' tag='path' /&gt;" Guid="fa9ebec6-8eaf-425a-8789-cd36bb707616" InformativeScreenshot="95dc12725aed07665a2ff603d7e3e4fd.png" Reference="gLQ8BQgTTESrr2IMSaAHeg/GP01FtG_i0yKBbsZmXY_ww" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.PointOffset>
+                          <uix:PointOffset X="-2" />
+                        </uix:TargetAnchorable.PointOffset>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,235" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Filter screen not loaded&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/top" ContentHash="oI4cLV5j9k2Vm5C26mYqIA" DesignTimeRectangle="789, 515, 1328, 1046" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div' idx='4' tag='DIV' /&gt;" Guid="d4f52501-68b6-46e1-82cf-1f4d7f9e2d16" InformativeScreenshot="65c16f2662b6016faac4ec9d70a1b156.png" Reference="gLQ8BQgTTESrr2IMSaAHeg/IQTh9WXfekiZndNg3ya15Q" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State 'UL'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1088.5" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d55a17a4-7168-4f8a-8347-5fae92007507" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,562" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,180" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Filtered movie list loaded&quot;]" />
+                  <uix:NGetText DisplayName="Get Text 'The Dark Knight'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,147" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="d55a17a4-7168-4f8a-8347-5fae92007507" TextString="[scrapedTitle]" Version="V5">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="imdb.com/chart/top" CVScreenId="4b18b42c-c0d2-4320-acb3-c0d4703068c5" ContentHash="JtxIiDhlL0OzV-Wrtb8oog" CvType="AnyWordGroup" DesignTimeRectangle="206, 663, 2464, 74" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" Guid="45172024-0547-4294-a480-002c8cd7b95a" InformativeScreenshot="3d8d642c3dfac2f1d2a3fdae16fc0364.png" Reference="gLQ8BQgTTESrr2IMSaAHeg/eCSsn5Y0HkaNGSohi35t_Q" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Screen scrape title: &quot; + scrapedTitle]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,231" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Filtered movie list didn't load&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/top" ContentHash="B8T9usDbDUCQU7UElpcqCg" DesignTimeRectangle="206, 1269, 1616, 1212" ElementType="List" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='UL' /&gt;" Guid="406da487-5ba8-4826-920b-10f55f1f9a54" InformativeScreenshot="640a56dcf242b1be7773b845dce6ae55.png" Reference="gLQ8BQgTTESrr2IMSaAHeg/5OJOruQZbEW9nnsSAdu00g" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NExtractDataGeneric x:TypeArguments="sd3:DataTable2" ContinueOnError="True" DisplayName="Extract Table Data 'UL'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='MovieName'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='h3' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" ExtractedData="[dtMovies]" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,147" sap2010:WorkflowViewState.IdRef="NExtractDataGeneric`1_1" InteractionMode="SameAsCard" LimitExtractionTo="Rows" MaximumResults="[in_N]" ScopeIdentifier="d55a17a4-7168-4f8a-8347-5fae92007507" Version="V5">
+              <uix:NExtractDataGeneric.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.imdb.com/chart/top/?genres=drama&amp;year=2000%2C" DesignTimeRectangle="206, 1269, 1616, 19393" ElementType="List" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='presentation' tag='UL' /&gt;" Guid="2423e7f3-3864-4433-aef5-67f9e53fcf3c" InformativeScreenshot="c8a7cdf3e4cbbe17a48c1ef3f3e3c2a9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NExtractDataGeneric.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:String x:Key="bbbffa17-1024-47ac-a79a-41b860f664d0">Share</x:String>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NExtractDataGeneric>
+            <Assign sap:VirtualizedContainerService.HintSize="452,176" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataTable">[out_Table]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataTable">[dtMovies]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,180" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Randuri extrase: &quot; + out_Table.Rows.Count.ToString]" />
+            <ui:CreateDirectory Output="{x:Null}" ContinueOnError="True" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="452,127.5" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[Path.Combine(Environment.CurrentDirectory, &quot;Output&quot;)]" />
+            <Assign sap:VirtualizedContainerService.HintSize="452,180" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[txtResult]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">["IMDb Movies List:" &amp; Environment.NewLine &amp; Environment.NewLine]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[out_Table]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="452,422" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,235" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[txtResult]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[txtResult &amp; row("MovieName").ToString &amp; Environment.NewLine]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" FileName="[in_FileName]" sap:VirtualizedContainerService.HintSize="452,171.5" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[txtResult]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-13, -13, 2906, 1730" BrowserType="Chrome" ContentHash="5A9rDjDxW0yAWlK5jFj0Vg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAbtJREFUWEdj+HpU4v9AYgZ0AXrjUQeMOmDUAaMOGHwOWNTE/9/VnO1/mCvH/0NzhMFsEE704/z/dIcYnA/CV1aLoPDdLNj+VyXx/P98WPx/TjgXWKy7gBfDUrwOaMzg+c/AwPBfQpjp/9puQTAbhDnZGf4fmSsM54PwiYUIviAvI5y9vE3gv5kOK5id5MeJYSlZDgDhzjxenA7YPlnwPwszhD2hmA/uAFDIre4UAOMvR8TJcwAbK8RgUJCCQgKbA3ZNFfrPxQEJBWQHsLMh1Ddn8pDnAHV5ZjDNwcbwX0uRhSgHmGpDHBDjxfnf34EdzPa1YyfPAYYaLP8lRZjAbG9biGGEHABPA/6cYAxi+9iS6QAjDZb/toZsYDYodeNyACx6aOIAUGICsfuKEAkR2QG1qRB9IDyxBBEFsV6c/0NdOMBssqMA5IDWbIjF63sROQPZATDMxMTw/+h8YXgIsLIg5CoTuQk74OQi4f/Tq/j+L2zk/39rvSiYvbpL4P+VVSJg9uPtYmAahJ9sh8jD8IwqPrB+kDlrugXAYofnCP+fWsH3f0o53/8PB4nIhvTGow4YdcCoA0YdMOoAAJ8hGl9vu9AmAAAAAElFTkSuQmCC" InformativeScreenshot="c9f7fef0be8cd03b4a79b99a03eba416.jpg" Reference="gLQ8BQgTTESrr2IMSaAHeg/ygT6c37XGk6UfQyOUED6QQ" Selector="&lt;html app='chrome.exe' title='IMDb Top 250 movies' /&gt;" Url="https://www.imdb.com/chart/top/" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

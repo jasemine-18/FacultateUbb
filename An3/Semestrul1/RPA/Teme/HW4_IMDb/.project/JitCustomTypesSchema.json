@@ -1,0 +1,47 @@
+{
+  "exportedBy": null,
+  "bundleHash": null,
+  "version": "1.0.0.0",
+  "jitAssemblyCompilerCommands": [
+    {
+      "providerName": "TypedDataTable",
+      "typedDataTableDto": {
+        "id": 1,
+        "idRef": "NExtractDataGeneric`1_1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|kfjtfd34yXRv4tSTWe5cQ4IcRM2GsiFxdDGu9Q0ZyME",
+        "dataType": "System.Data.DataTable, System.Data.Common",
+        "columns": [
+          {
+            "columnName": "MovieName",
+            "dataType": "System.String, System.Private.CoreLib"
+          }
+        ]
+      },
+      "entityAssemblyKey": {
+        "name": "Studio.Generated.TypedDataTable1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|CFIst5fGzUxGIjFb79DiwhiGr0BCOCw3iDYH8jx4rQ",
+        "assemblyName": "Studio.Generated.TypedDataTable1"
+      }
+    },
+    {
+      "providerName": "TypedDataTable",
+      "typedDataTableDto": {
+        "id": 2,
+        "idRef": "NExtractDataGeneric`1_1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|kfjtfd34yXRv4tSTWe5cQ4IcRM2GsiFxdDGu9Q0ZyME",
+        "dataType": "System.Data.DataTable, System.Data.Common",
+        "columns": [
+          {
+            "columnName": "MovieName",
+            "dataType": "System.String, System.Private.CoreLib"
+          }
+        ]
+      },
+      "entityAssemblyKey": {
+        "name": "Studio.Generated.TypedDataTable2",
+        "hash": "NExtractDataGeneric`1_1|DataTable|CFIst5fGzUxGIjFb79DiwhiGr0BCOCw3iDYH8jx4rQ",
+        "assemblyName": "Studio.Generated.TypedDataTable2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aWy9f6g_Ukq80Yugoke-Wg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="imdb.com/chart/top" CVScreenId="97e82270-f8e8-4e83-bacd-0121b062a651" CvElementArea="592, 376, 1388, 73" CvType="InputBox" DesignTimeRectangle="653, 384, 1212, 62" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='suggestion-search' tag='INPUT' type='text' class='imdb-header-search__input searchTypeahead__input react-autosuggest__input react-autosuggest__input--open' placeholder='Search IMDb' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="cb1774b5-1777-4f44-a02f-c2e8e2e202a8" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="97e82270-f8e8-4e83-bacd-0121b062a651" CvElementArea="531, 379, 122, 69" CvType="InputBox" DesignTimeRectangle="559, 395, 36, 40" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='ipc-btn__text' parentid='nav-search-form' tag='SPAN' type='' aaname='All' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='All' /&gt;" Guid="1167c38f-a674-4aa9-8c1a-5f08f90915b6" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="3a0b42bd0fed065d4308d9f8f0ab7eac.png" xmlns="">0gSCXKCtp20i4-C-hxMfSDw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

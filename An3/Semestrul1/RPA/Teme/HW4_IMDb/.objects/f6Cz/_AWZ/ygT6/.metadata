@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome IMDb Top 250 movies",
+  "Type": "Screen",
+  "Id": "ygT6c37XGk6UfQyOUED6QQ",
+  "Reference": "gLQ8BQgTTESrr2IMSaAHeg/ygT6c37XGk6UfQyOUED6QQ",
+  "ParentRef": "gLQ8BQgTTESrr2IMSaAHeg/_AWZcERQS0WH__Ki6sYyBQ",
+  "Created": "2025-12-18T00:00:29.9731713Z",
+  "Updated": "2025-12-18T00:00:29.9731713Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.22.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

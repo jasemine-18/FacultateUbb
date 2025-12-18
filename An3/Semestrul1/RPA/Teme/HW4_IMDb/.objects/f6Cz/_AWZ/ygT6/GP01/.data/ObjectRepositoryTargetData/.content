@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="E91gzXxhIEqTsvFT_86KSA" Reference="gLQ8BQgTTESrr2IMSaAHeg/GP01FtG_i0yKBbsZmXY_ww" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="imdb.com/chart/top" CVScreenId="e98b84dd-420a-4b4e-8386-56a22ecc37e8" CvElementArea="2045, 446, 45, 42" CvType="CloseButton" DesignTimeRectangle="2056, 454, 26, 26" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg&amp;gt;path' idx='2' tag='path' /&gt;" Guid="fa9ebec6-8eaf-425a-8789-cd36bb707616" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.PointOffset>
+        <PointOffset X="-2" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="95dc12725aed07665a2ff603d7e3e4fd.png" xmlns="">05wQZDPuMKEGXlPF5SvWPXg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

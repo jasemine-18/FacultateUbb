@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="dHgSDZM3UEyIbMAzggG4Dg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="imdb.com/chart/top" CVScreenId="9421f97a-51b5-4716-b925-9012e19c5fc1" CvElementArea="881, 1067, 512, 105" CvType="InputBox" DesignTimeRectangle="887, 1072, 503, 96" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='text-input__0' tag='INPUT' type='number' class='ipc-textfield__input' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="8bbde931-624f-4113-8ad1-3f23048dd834" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='_new' title='IMDb Top 250 movies' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="9421f97a-51b5-4716-b925-9012e19c5fc1" CvTextArea="883, 1017, 212, 24" CvTextArgument="RELEASE YEAR" CvType="Text" DesignTimeRectangle="885, 1014, 1106, 32" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='release year' tag='DIV' type='' class='sc-a3556045-0 eWgbat' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='RELEASE YEAR' /&gt;" Guid="f1bb4c68-5ddd-4c3f-a057-b5d7090023ef" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="bf6a666e6ea4562c9290b3f8bc60019a.png" xmlns="">0094_ReAGT0an1N7u6aJovQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="5A9rDjDxW0yAWlK5jFj0Vg" Reference="gLQ8BQgTTESrr2IMSaAHeg/ygT6c37XGk6UfQyOUED6QQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-13, -13, 2906, 1730" BrowserType="Chrome" ContentHash="ShUw60vOkUOXUCYmtutGQw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAbtJREFUWEdj+HpU4v9AYgZ0AXrjUQeMOmDUAaMOGHwOWNTE/9/VnO1/mCvH/0NzhMFsEE704/z/dIcYnA/CV1aLoPDdLNj+VyXx/P98WPx/TjgXWKy7gBfDUrwOaMzg+c/AwPBfQpjp/9puQTAbhDnZGf4fmSsM54PwiYUIviAvI5y9vE3gv5kOK5id5MeJYSlZDgDhzjxenA7YPlnwPwszhD2hmA/uAFDIre4UAOMvR8TJcwAbK8RgUJCCQgKbA3ZNFfrPxQEJBWQHsLMh1Ddn8pDnAHV5ZjDNwcbwX0uRhSgHmGpDHBDjxfnf34EdzPa1YyfPAYYaLP8lRZjAbG9biGGEHABPA/6cYAxi+9iS6QAjDZb/toZsYDYodeNyACx6aOIAUGICsfuKEAkR2QG1qRB9IDyxBBEFsV6c/0NdOMBssqMA5IDWbIjF63sROQPZATDMxMTw/+h8YXgIsLIg5CoTuQk74OQi4f/Tq/j+L2zk/39rvSiYvbpL4P+VVSJg9uPtYmAahJ9sh8jD8IwqPrB+kDlrugXAYofnCP+fWsH3f0o53/8PB4nIhvTGow4YdcCoA0YdMOoAAJ8hGl9vu9AmAAAAAElFTkSuQmCC" Reference="gLQ8BQgTTESrr2IMSaAHeg/ygT6c37XGk6UfQyOUED6QQ" Selector="&lt;html app='chrome.exe' title='IMDb Top 250 movies' /&gt;" Url="https://www.imdb.com/chart/top/" Version="V2">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="c9f7fef0be8cd03b4a79b99a03eba416.jpg" xmlns="">0buqdcNfVckCHjnjRW3O5Tg</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>
