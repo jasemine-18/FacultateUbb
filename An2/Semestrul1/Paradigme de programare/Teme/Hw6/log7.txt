@@ -1,0 +1,304 @@
+ExeStack:
+(Ref(int) v; (new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5))))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+Ref(int) v
+(new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5)))))
+SymTable:
+v -> (0,int)
+Out:
+FileTable:
+
+ExeStack:
+new(v, 20)
+(print(rH(v)); (wH(v, 30); print((rH(v) + 5))))
+SymTable:
+v -> (0,int)
+Out:
+FileTable:
+
+ExeStack:
+(print(rH(v)); (wH(v, 30); print((rH(v) + 5))))
+SymTable:
+v -> (1,int)
+Out:
+FileTable:
+
+ExeStack:
+print(rH(v))
+(wH(v, 30); print((rH(v) + 5)))
+SymTable:
+v -> (1,int)
+Out:
+FileTable:
+
+ExeStack:
+(wH(v, 30); print((rH(v) + 5)))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+wH(v, 30)
+print((rH(v) + 5))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+print((rH(v) + 5))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+SymTable:
+v -> (1,int)
+Out:
+20
+35
+FileTable:
+
+ExeStack:
+(Ref(int) v; (new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5))))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+Ref(int) v
+(new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5)))))
+SymTable:
+v -> (0,int)
+Out:
+FileTable:
+
+ExeStack:
+new(v, 20)
+(print(rH(v)); (wH(v, 30); print((rH(v) + 5))))
+SymTable:
+v -> (0,int)
+Out:
+FileTable:
+
+ExeStack:
+(print(rH(v)); (wH(v, 30); print((rH(v) + 5))))
+SymTable:
+v -> (1,int)
+Out:
+FileTable:
+
+ExeStack:
+print(rH(v))
+(wH(v, 30); print((rH(v) + 5)))
+SymTable:
+v -> (1,int)
+Out:
+FileTable:
+
+ExeStack:
+(wH(v, 30); print((rH(v) + 5)))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+wH(v, 30)
+print((rH(v) + 5))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+print((rH(v) + 5))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+SymTable:
+v -> (1,int)
+Out:
+20
+35
+FileTable:
+
+ExeStack:
+(Ref(int) v; (new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5))))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+Ref(int) v
+(new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5)))))
+SymTable:
+v -> (0,int)
+Out:
+FileTable:
+
+ExeStack:
+new(v, 20)
+(print(rH(v)); (wH(v, 30); print((rH(v) + 5))))
+SymTable:
+v -> (0,int)
+Out:
+FileTable:
+
+ExeStack:
+(print(rH(v)); (wH(v, 30); print((rH(v) + 5))))
+SymTable:
+v -> (1,int)
+Out:
+FileTable:
+
+ExeStack:
+print(rH(v))
+(wH(v, 30); print((rH(v) + 5)))
+SymTable:
+v -> (1,int)
+Out:
+FileTable:
+
+ExeStack:
+(wH(v, 30); print((rH(v) + 5)))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+wH(v, 30)
+print((rH(v) + 5))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+print((rH(v) + 5))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+SymTable:
+v -> (1,int)
+Out:
+20
+35
+FileTable:
+
+ExeStack:
+(Ref(int) v; (new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5))))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+Ref(int) v
+(new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(new(v, 20); (print(rH(v)); (wH(v, 30); print((rH(v) + 5)))))
+SymTable:
+v -> (0,int)
+Out:
+FileTable:
+
+ExeStack:
+new(v, 20)
+(print(rH(v)); (wH(v, 30); print((rH(v) + 5))))
+SymTable:
+v -> (0,int)
+Out:
+FileTable:
+
+ExeStack:
+(print(rH(v)); (wH(v, 30); print((rH(v) + 5))))
+SymTable:
+v -> (1,int)
+Out:
+FileTable:
+
+ExeStack:
+print(rH(v))
+(wH(v, 30); print((rH(v) + 5)))
+SymTable:
+v -> (1,int)
+Out:
+FileTable:
+
+ExeStack:
+(wH(v, 30); print((rH(v) + 5)))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+wH(v, 30)
+print((rH(v) + 5))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+print((rH(v) + 5))
+SymTable:
+v -> (1,int)
+Out:
+20
+FileTable:
+
+ExeStack:
+SymTable:
+v -> (1,int)
+Out:
+20
+35
+FileTable:
+
