@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ro.jas.toy.gui.ProgramSelectorController" style="-fx-padding: 12;">
+    <Label text="Select a program to run:" />
+    <ListView fx:id="programsList" VBox.vgrow="ALWAYS"/>
+    <Button text="Open Program" onAction="#onOpenProgram"/>
+</VBox>

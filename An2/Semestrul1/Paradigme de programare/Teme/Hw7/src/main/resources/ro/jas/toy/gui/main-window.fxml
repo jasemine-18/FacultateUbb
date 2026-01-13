@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ro.jas.toy.gui.MainWindowController">
+
+    <top>
+        <HBox spacing="12">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Label text="PrgStates count:"/>
+            <TextField fx:id="prgStatesCountField" editable="false" prefWidth="80"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="runOneStepBtn" text="Run one step" onAction="#onRunOneStep"/>
+        </HBox>
+    </top>
+
+    <center>
+        <GridPane hgap="12" vgap="12">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="30"/>
+                <ColumnConstraints percentWidth="40"/>
+                <ColumnConstraints percentWidth="30"/>
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints percentHeight="50"/>
+                <RowConstraints percentHeight="50"/>
+            </rowConstraints>
+
+            <!-- LEFT TOP: Program IDs -->
+            <VBox spacing="6" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label text="PrgState IDs"/>
+                <ListView fx:id="prgStateIdsList"/>
+            </VBox>
+
+            <!-- MIDDLE TOP: Heap table -->
+            <VBox spacing="6" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <Label text="Heap"/>
+                <TableView fx:id="heapTable" prefHeight="250">
+                    <columns>
+                        <TableColumn fx:id="heapAddressCol" text="Address" prefWidth="120"/>
+                        <TableColumn fx:id="heapValueCol" text="Value" prefWidth="260"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <!-- RIGHT TOP: Out + FileTable -->
+            <VBox spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                <VBox spacing="6">
+                    <Label text="Out"/>
+                    <ListView fx:id="outList"/>
+                </VBox>
+                <VBox spacing="6">
+                    <Label text="FileTable"/>
+                    <ListView fx:id="fileTableList"/>
+                </VBox>
+            </VBox>
+
+            <!-- LEFT BOTTOM: ExeStack -->
+            <VBox spacing="6" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <Label text="ExeStack (selected PrgState)"/>
+                <ListView fx:id="exeStackList"/>
+            </VBox>
+
+            <!-- MIDDLE BOTTOM: SymTable -->
+            <VBox spacing="6" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="2">
+                <Label text="SymTable (selected PrgState)"/>
+                <TableView fx:id="symTable" prefHeight="250">
+                    <columns>
+                        <TableColumn fx:id="symVarCol" text="Variable" prefWidth="180"/>
+                        <TableColumn fx:id="symValueCol" text="Value" prefWidth="420"/>
+                    </columns>
+                </TableView>
+            </VBox>
+
+        </GridPane>
+    </center>
+
+</BorderPane>

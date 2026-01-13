@@ -1,0 +1,30 @@
+package ro.jas.toy.model.exp;
+
+import ro.jas.toy.exceptions.MyException;
+import ro.jas.toy.model.adt.MyIDictionary;
+import ro.jas.toy.model.adt.MyIHeap;
+import ro.jas.toy.model.type.Type;
+import ro.jas.toy.model.value.Value;
+
+// VarExp: ia valoarea variabilei din SymTable. Arunca eroare daca nu e definita.
+public class VarExp implements Exp {
+    private final String id;
+
+    //constructor
+    public VarExp(String id) {
+        this.id = id;
+    }
+
+    @Override public Value eval(MyIDictionary<String, Value> tbl,
+                                MyIHeap<Value> heap) throws MyException {
+        return tbl.lookup(id);
+    }
+    @Override public String toString() {
+        return id;
+    }
+
+    @Override
+    public Type typecheck(MyIDictionary<String, Type> typeEnv) throws MyException {
+        return typeEnv.lookup(id);
+    }
+}

@@ -1,0 +1,344 @@
+ExeStack:
+(int a; (int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+int a
+(int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))))
+SymTable:
+a -> 0
+Out:
+FileTable:
+
+ExeStack:
+int b
+(a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))
+SymTable:
+a -> 0
+Out:
+FileTable:
+
+ExeStack:
+(a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = 5
+(b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+(b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))
+SymTable:
+a -> 5
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+b = 7
+IF(a < b) THEN(print(a)) ELSE(print(b))
+SymTable:
+a -> 5
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+IF(a < b) THEN(print(a)) ELSE(print(b))
+SymTable:
+a -> 5
+b -> 7
+Out:
+FileTable:
+
+ExeStack:
+print(a)
+SymTable:
+a -> 5
+b -> 7
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> 5
+b -> 7
+Out:
+5
+FileTable:
+
+ExeStack:
+(int a; (int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+int a
+(int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))))
+SymTable:
+a -> 0
+Out:
+FileTable:
+
+ExeStack:
+int b
+(a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))
+SymTable:
+a -> 0
+Out:
+FileTable:
+
+ExeStack:
+(a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = 5
+(b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+(b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))
+SymTable:
+a -> 5
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+b = 7
+IF(a < b) THEN(print(a)) ELSE(print(b))
+SymTable:
+a -> 5
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+IF(a < b) THEN(print(a)) ELSE(print(b))
+SymTable:
+a -> 5
+b -> 7
+Out:
+FileTable:
+
+ExeStack:
+print(a)
+SymTable:
+a -> 5
+b -> 7
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> 5
+b -> 7
+Out:
+5
+FileTable:
+
+ExeStack:
+(int a; (int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+int a
+(int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))))
+SymTable:
+a -> 0
+Out:
+FileTable:
+
+ExeStack:
+int b
+(a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))
+SymTable:
+a -> 0
+Out:
+FileTable:
+
+ExeStack:
+(a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = 5
+(b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+(b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))
+SymTable:
+a -> 5
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+b = 7
+IF(a < b) THEN(print(a)) ELSE(print(b))
+SymTable:
+a -> 5
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+IF(a < b) THEN(print(a)) ELSE(print(b))
+SymTable:
+a -> 5
+b -> 7
+Out:
+FileTable:
+
+ExeStack:
+print(a)
+SymTable:
+a -> 5
+b -> 7
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> 5
+b -> 7
+Out:
+5
+FileTable:
+
+ExeStack:
+(int a; (int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+int a
+(int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))))
+SymTable:
+Out:
+FileTable:
+
+ExeStack:
+(int b; (a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))))
+SymTable:
+a -> 0
+Out:
+FileTable:
+
+ExeStack:
+int b
+(a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))
+SymTable:
+a -> 0
+Out:
+FileTable:
+
+ExeStack:
+(a = 5; (b = 7; IF(a < b) THEN(print(a)) ELSE(print(b))))
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+a = 5
+(b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))
+SymTable:
+a -> 0
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+(b = 7; IF(a < b) THEN(print(a)) ELSE(print(b)))
+SymTable:
+a -> 5
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+b = 7
+IF(a < b) THEN(print(a)) ELSE(print(b))
+SymTable:
+a -> 5
+b -> 0
+Out:
+FileTable:
+
+ExeStack:
+IF(a < b) THEN(print(a)) ELSE(print(b))
+SymTable:
+a -> 5
+b -> 7
+Out:
+FileTable:
+
+ExeStack:
+print(a)
+SymTable:
+a -> 5
+b -> 7
+Out:
+FileTable:
+
+ExeStack:
+SymTable:
+a -> 5
+b -> 7
+Out:
+5
+FileTable:
+
