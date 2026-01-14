@@ -1,0 +1,55 @@
+# ===============================
+# Miscellaneous
+# ===============================
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# ===============================
+# IntelliJ / Android Studio
+# ===============================
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# ===============================
+# VS Code (optional)
+# ===============================
+.vscode/
+
+# ===============================
+# Flutter / Dart / Pub
+# ===============================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub/
+.pub-cache/
+.metadata
+build/
+coverage/
+**/doc/api/
+
+# ===============================
+# Android
+# ===============================
+android/.gradle/
+android/local.properties
+android/app/debug/
+android/app/profile/
+android/app/release/
+
+# ===============================
+# iOS
+# ===============================
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/.last_build_id
